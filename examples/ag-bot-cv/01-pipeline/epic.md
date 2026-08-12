@@ -1,5 +1,7 @@
 # Epic: Pipeline (Ag-Bot-CV)
 
+## What this epic covers
+
 The Data B detection pipeline on the Pi: camera capture → image-quality gate → detector inference → MQTT publish. Interfaces to Embedded (upstream, camera), Data A (mid-stream, pose lookup), and Cloud (downstream, MQTT + MinIO).
 
 ## Cards in this epic
@@ -7,3 +9,7 @@ The Data B detection pipeline on the Pi: camera capture → image-quality gate �
 1. Design the pipeline interface
 2. Build a stub pipeline end-to-end
 3. Replace stubs with real components (incremental)
+
+## Success criteria
+
+All five stages run for real on the Pi — no stubs left — publishing schema-valid detections to the live broker, with `pytest tests/` green. Demoable as one command that produces messages Kayvan's subscriber accepts.

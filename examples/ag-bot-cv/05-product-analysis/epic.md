@@ -1,5 +1,7 @@
 # Epic: Product analysis (Ag-Bot-CV)
 
+## What this epic covers
+
 Whether the *system* works, not just the models. Runs on realistic inputs (webcam-captured greenhouse footage, iPhone shots), handles edge cases (empty frames, broker down, no pose available), and can be run by someone outside Data B without our help.
 
 ## Cards in this epic
@@ -7,3 +9,7 @@ Whether the *system* works, not just the models. Runs on realistic inputs (webca
 1. End-to-end tests on realistic inputs
 2. Integration and edge-case tests
 3. Hand-off test — someone else runs it
+
+## Success criteria
+
+The pipeline survives ~30 non-training real-world inputs and every named edge case without a silent failure, and Pavan runs it on a clean Pi from the README alone. Demoable by killing the broker mid-run and showing the pipeline log and exit cleanly.
